@@ -5,9 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron-build": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder --publish=never"
   },
   "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
     "@mui/icons-material": "7.3.5",
@@ -64,23 +70,21 @@
     "vaul": "1.1.2"
   },
   "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "concurrently": "^9.1.0",
+    "wait-on": "^8.0.1",
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5"
   },
-  "peerDependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
-  },
+  "main": "dist-electron/main.js",
+  "homepage": "./",
   "pnpm": {
     "overrides": {
       "vite": "6.3.5"
