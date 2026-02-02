@@ -69,7 +69,7 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <StatCard 
               title="Total Revenue" 
-              value="$128,430.00" 
+              value="R1,284,300.00" 
               change="+12.5%" 
               isPositive={true}
               icon={<TrendingUp size={24} />}
@@ -77,7 +77,7 @@ const App = () => {
             />
             <StatCard 
               title="Total Expenses" 
-              value="$64,320.00" 
+              value="R643,200.00" 
               change="-2.4%" 
               isPositive={true}
               icon={<CreditCard size={24} />}
@@ -85,7 +85,7 @@ const App = () => {
             />
             <StatCard 
               title="Net Profit" 
-              value="$64,110.00" 
+              value="R641,100.00" 
               change="+18.2%" 
               isPositive={true}
               icon={<BarChart3 size={24} />}
@@ -93,7 +93,7 @@ const App = () => {
             />
             <StatCard 
               title="Cash Flow" 
-              value="$42,890.00" 
+              value="R428,900.00" 
               change="-5.1%" 
               isPositive={false}
               icon={<Wallet size={24} />}

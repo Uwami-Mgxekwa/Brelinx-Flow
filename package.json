@@ -1,15 +1,19 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "accounting-dashboard",
+  "productName": "Accounting Dashboard",
+  "description": "Professional accounting dashboard desktop application",
+  "version": "1.0.0",
+  "author": "Your Company",
   "private": true,
-  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
     "electron": "electron .",
     "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
-    "electron-build": "npm run build && electron-builder",
-    "dist": "npm run build && electron-builder --publish=never"
+    "electron-build": "npm run build && npm run build-electron && electron-builder",
+    "build-electron": "tsc --project electron/tsconfig.json",
+    "dist": "npm run build && npm run build-electron && electron-builder --publish=never"
   },
   "dependencies": {
     "react": "18.3.1",
@@ -85,6 +89,7 @@
   },
   "main": "dist-electron/main.js",
   "homepage": "./",
+  "type": "module",
   "pnpm": {
     "overrides": {
       "vite": "6.3.5"

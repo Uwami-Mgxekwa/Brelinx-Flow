@@ -51,7 +51,7 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProps) => {
               <div className="w-8 h-8 bg-[#10B981] rounded-lg flex items-center justify-center">
                 <div className="w-4 h-4 bg-white rounded-sm rotate-45" />
               </div>
-              <span className="font-bold text-xl tracking-tight">SAGE <span className="text-[#10B981]">X</span></span>
+              <span className="font-bold text-xl tracking-tight">BRELIX <span className="text-[#10B981]">FLOW</span></span>
             </Motion.div>
           )}
         </AnimatePresence>

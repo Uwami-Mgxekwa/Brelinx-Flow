@@ -56,7 +56,7 @@ export const DashboardCharts = () => {
                 axisLine={false} 
                 tickLine={false} 
                 tick={{fill: '#9CA3AF', fontSize: 12}}
-                tickFormatter={(value) => `$${value/1000}k`}
+                tickFormatter={(value) => `R${value/1000}k`}
               />
               <Tooltip 
                 contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
@@ -115,7 +115,7 @@ export const DashboardCharts = () => {
                 <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
                 <span className="text-sm font-medium text-neutral-600">{item.name}</span>
               </div>
-              <span className="text-sm font-bold text-black">${item.value}k</span>
+              <span className="text-sm font-bold text-black">R{item.value}k</span>
             </div>
           ))}
         </div>

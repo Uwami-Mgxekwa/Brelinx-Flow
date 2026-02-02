@@ -10,7 +10,6 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false,
       preload: join(__dirname, 'preload.js')
     },
     icon: join(__dirname, '../assets/icon.png'), // Add your app icon here
